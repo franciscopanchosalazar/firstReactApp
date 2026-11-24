@@ -1,0 +1,12 @@
+This is a guide to understand the way I learn how to do apps with react, so any one can follow and do it as well.
+
+1- Install Node.js
+2- Create a folder where the project will be storaged.
+3- Open a terminal or comand promt in the folder.
+4- Create the react project by:
+    npm create vite@latest mama-app -- --template react
+
+5- now that the folder has been created, go to the browser and enter: http://localhost:5173/
+   You should see the default Vite + React page.
+
+6- 
