@@ -1,0 +1,60 @@
+/*
+morado: #4e3a4a
+rosado: #f3cce0
+verde: #404133
+amarillo: #fcfacf
+grey: #e4e1e4
+
+whites:
+Off White: #FAF9F6
+Ivory: #FFFFF0
+alabaster: #EDEADE
+*/
+
+body {
+    background-color: #FFFFFF;
+}
+
+.loginContainer {
+    width: 350px;
+    margin: 50px auto;
+    border: 1px solid #4e3a4a;
+    background-color: #FAF9F6;
+    padding: 20px;
+    box-shadow: 20px 20px 50px 0px rgba(78, 58, 74, 0.4);
+}
+
+.loginTitle {
+    text-align: center;
+    color: #4e3a47;
+    margin-bottom: 25px;
+}
+
+.loginInput {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: -10px -10px 50px 0px rgba(238, 184, 213, 0.4);
+
+}
+
+.loginButton, .registerButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e3a4a;
+    color: #e4e1e4;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginButton:hover, .registerButton:hover {
+    cursor: pointer;
+    background-color: #eeb8d5;
+    color: #4e3a4a;
+}

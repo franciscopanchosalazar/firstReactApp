@@ -1,0 +1,25 @@
+- First thing to understand is that react can use functios as part of the interface, procesing html elements inside js.
+
+    Example:
+        Everything inside return() is what React will draw on the screen, export on the other hand tells to React what to display.
+
+        function App() {
+        return (
+            <div>
+            <h1>Hello React!</h1>
+            </div>
+        );
+        }
+
+        export default App;
+
+
+- useState()
+    allows a component to store data and update it while automatically re-rendering the interface.
+
+    Example:
+    const [contador, setContador] = useState(0);
+
+    contador stores the value
+    setContador() changes the value
+    React automatically updates the screen
