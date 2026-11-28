@@ -24,6 +24,17 @@ body {
     box-shadow: 20px 20px 50px 0px rgba(78, 58, 74, 0.4);
 }
 
+.mainContainer img {
+    cursor: pointer;
+    border-radius: 60px;
+}
+
+.mainContainer img:hover {
+        box-shadow:
+        0 0 8px rgba(255, 182, 220, 0.5),
+        0 0 16px rgba(255, 182, 220, 0.4);
+}
+
 .mainTitle {
     text-align: center;
     color: #4e3a47;

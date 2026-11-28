@@ -2,24 +2,23 @@ function Profile({ emailUsuario, avatarUsuario, cambiarPagina }) {
     return (
         <div className="mainContainer">
             <h1 className="mainTitle">Perfil</h1>
-        
+            
+            {/* Displays the avatar in the profile */}
             <img
                 className="mainTitle"
                 src={avatarUsuario}
                 alt="User Avatar"
                 width="120"
+                onClick={() => cambiarPagina("avatar")}
             />
             
-            <br/>
-            <br/>
-            <p>Hola {emailUsuario}</p>
-            
-            <br/>
+            <p>Hola {emailUsuario}</p>  
+
             <button 
                 className="mainButton"
-                onClick={() => cambiarPagina("avatar")}
+                onClick={() => cambiarPagina("map")}
             >
-                Cambiar imagen
+                Ir al mapa
             </button>
 
         </div>

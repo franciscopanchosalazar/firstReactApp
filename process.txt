@@ -13,3 +13,5 @@ This is a guide to understand the way I learn how to do apps with react, so any 
 7- If everything worked smoothly then open the project in vscode.
 8- Look for src/App.jsx and delete everything inside it (I just copy the file in advance just in case)
 9- Start working in that file. (Every time we need to run our local host, open a terminal and enter: npm run dev)
+
+install map: npm install leaflet react-leaflet

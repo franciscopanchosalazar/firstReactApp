@@ -1,16 +1,23 @@
 import { useState } from "react";
 
+// Here we import the functions from the different pages
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Avatar from "./pages/Avatar";
+import Map from "./pages/Map";
 
 // const [currentValue, modifierFunction] = createTheFunction("passedValue")
 function App() {
   const [paginaActual, setPaginaActual] = useState("login");
   const [emailUsuario, setEmailUsuario] = useState("");
   const [nombreUsuario, setNombreUsuario] = useState("");
-  const [avatarUsuario, setAvatarUsuario] = useState("👤");
+  const [avatarUsuario, setAvatarUsuario] = useState("");
+
+  // Manages the map location
+  const [latitud, setLatitud] = useState(null);
+  const [longitud, setLongitud] = useState(null);
+
 
 return (
   <div>
@@ -43,6 +50,15 @@ return (
         avatarUsuario={avatarUsuario}
         setAvatarUsuario={setAvatarUsuario} 
         cambiarPagina={setPaginaActual}
+      />
+    )}
+
+    {paginaActual === "map" && (
+      <Map
+        latitud={latitud}
+        longitud={longitud}
+        setLatitud={setLatitud}
+        setLongitud={setLongitud}
       />
     )}
 
