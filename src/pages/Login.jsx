@@ -1,29 +1,34 @@
 import "../styles/Auth.css";
 import { useState } from "react";
 
-function Login({ cambiarPagina }) {
+function Login({ cambiarPagina, setEmailUsuario}) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [name, setName] = useState("");
 
     const iniciarSesion = () => {
         if (!email || !password) {
-            alert("Please complete all fields");
+            alert("Por favor complete todos los campos");
             return;
         }
 
-        alert(`Welcome ${email}`);
+        setEmailUsuario(email);
+        cambiarPagina("profile");
         };
 
     return (
-        <div className="loginContainer">
-            <h1 className="loginTitle">Login</h1>
+        <div className="mainContainer">
+            <h1 className="mainTitle">Login</h1>
 
             <input
                 className="loginInput"
                 type="email"
                 placeholder="Email"
-                onChange={(event) => setEmail(event.target.value)}
+                value={email}
+                onChange={(event) => setEmail(event.target.value)} 
+                // event.target.value gets the current text from the input.
+                // setEmail() updates the email state.
+                // React re-renders the component.
+                // value={email} makes the input display the current value of the email state.
             />
 
             <br />
@@ -32,13 +37,14 @@ function Login({ cambiarPagina }) {
                 className="loginInput"
                 type="password"
                 placeholder="Password"
+                value={password}
                 onChange={(event) => setPassword(event.target.value)}
             />
 
             <br />
 
             <button 
-                className="loginButton"
+                className="mainButton"
                 onClick={iniciarSesion}
             >
                 Iniciar sesión
@@ -48,10 +54,10 @@ function Login({ cambiarPagina }) {
             <br />
 
             <button 
-                className="registerButton"
+                className="mainButton"
                 onClick={() => cambiarPagina("register")}
             >
-                Crear cuenta 
+                Registrar 
             </button>
 
         </div>

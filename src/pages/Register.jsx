@@ -7,8 +7,8 @@ function Register({ cambiarPagina }) {
     const [password, setPassword] = useState("");
 
     return (
-        <div className="loginContainer">
-            <h1 className="loginTitle">Registro</h1>
+        <div className="mainContainer">
+            <h1 className="mainTitle">Registro</h1>
 
             <input
                 className="loginInput"
@@ -38,16 +38,16 @@ function Register({ cambiarPagina }) {
             <br />
 
             <button
-                className="loginButton"
+                className="mainButton"
             >
-                Registrar
+                Crear cuenta
             </button>
 
             <br />
             <br />
 
             <button 
-                className="registerButton"
+                className="mainButton"
                 onClick={() => cambiarPagina("login")}
             >
                 Volver
